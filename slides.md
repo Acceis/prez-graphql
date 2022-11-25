@@ -1060,6 +1060,92 @@ Many other vulnerabilities that are not necessarily specific to GraphQL.
 
 ---
 
+## More tools
+
+![bg width:100% right:70%](assets/tools.jpg)
+
+---
+
+[graphql-cop](https://github.com/dolevf/graphql-cop) - GraphQL vulnerability scanner
+
+---
+
+![bg fit](assets/graphql-cop.png)
+
+---
+
+[CrackQL](https://github.com/nicholasaleks/CrackQL) - GraphQL password brute-force and fuzzing utility
+
+- Defense evasion: evades traditional API HTTP rate-limit and query cost analysis defenses
+- Generic fuzzing (intruder like but benefits from defense evasion)
+
+---
+
+```graphql
+mutation {
+  login(username: {{username|str}}, password: {{password|str}}) {
+    accessToken
+  }
+}
+```
+
+```bash
+crackql -t http://noraj.test:5013/graphql -q login.graphql -i usernames_and_passwords.csv
+```
+
+---
+
+[GraphQLmap](https://github.com/swisskyrepo/GraphQLmap) - scripting engine to interact with a graphql endpoint
+
+- field fuzzing
+- NoSQLi / SQLi
+
+---
+
+[GraphQL Threat Matrix](https://github.com/nicholasaleks/graphql-threat-matrix) - resource that list the differences in how GraphQL implementations interpret and conform to the GraphQL specification
+
+---
+
+<!--
+_header: ''
+_footer: ''
+-->
+
+![bg fit](assets/graphql-threat-matrix.png)
+
+---
+
+[InQL](https://github.com/doyensec/inql) - (CLI tool and) Burp extension for GraphQL
+
+---
+
+<!--
+_header: ''
+_footer: ''
+-->
+
+![bg fit](assets/inql_01.png)
+
+---
+
+<!--
+_header: ''
+_footer: ''
+-->
+
+![bg fit](assets/inql_02.png)
+
+---
+
+<!--
+_header: ''
+_footer: ''
+-->
+
+![bg fit](assets/inql_03.png)
+
+---
+
 <!--
 _header: ''
 _footer: ''
