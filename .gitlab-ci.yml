@@ -11,6 +11,7 @@ pages:
     #- yarn config set unsafe-perm true
     - yarn global add @marp-team/marp-cli
     - marp slides.md --theme-set themes
+    - mkdir -p public
     - cp slides.html public/
     - cp -r themes/ assets/ public/
   artifacts:
