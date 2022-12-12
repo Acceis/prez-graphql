@@ -1,5 +1,5 @@
 {
   "markdown.marp.themes": [
-    "./themes/acceis.css"
+    "./docs/themes/acceis.css"
   ]
 }

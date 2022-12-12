@@ -10,10 +10,10 @@ pages:
   script:
     #- yarn config set unsafe-perm true
     - yarn global add @marp-team/marp-cli
-    - marp slides.md --theme-set themes --output index.html
+    - marp --theme-set themes --input-dir docs
     - mkdir -p public
-    - cp index.html public/
-    - cp -r themes/ assets/ public/
+    - cp docs/slides.html public/index.html
+    - cp -r docs/themes/ docs/assets/ public/
   artifacts:
     paths:
       - public
